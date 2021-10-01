@@ -7,8 +7,7 @@ if __name__=='__main__':
     transformer.summary()
 
     Checkpoint = tf.keras.callbacks.ModelCheckpoint(
-        filepath='model.h5',
-        save_weights_only=False,
+        filepath='model.hdf5',
         monitor='val_loss',
         mode='min',
         save_best_only=True)

@@ -8,7 +8,7 @@ if __name__=='__main__':
 
     Checkpoint = tf.keras.callbacks.ModelCheckpoint(
         filepath='model.h5',
-        save_weights_only=True,
+        save_weights_only=False,
         monitor='val_loss',
         mode='min',
         save_best_only=True)

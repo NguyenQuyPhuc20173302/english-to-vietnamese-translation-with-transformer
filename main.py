@@ -18,4 +18,4 @@ if __name__=='__main__':
         metrics=["accuracy"]
     )
 
-    transformer.fit(train_ds, epochs=1, validation_data=val_ds, callbacks=[Checkpoint])
+    transformer.fit(train_ds, epochs=100, validation_data=val_ds, callbacks=[Checkpoint])

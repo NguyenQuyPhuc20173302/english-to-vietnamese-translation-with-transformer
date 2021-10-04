@@ -53,7 +53,7 @@ eng_vectorization = TextVectorization(
 )
 spa_vectorization = TextVectorization(
     max_tokens=vocab_size,
-    output_mode="tf_idf",
+    output_mode="tf-idf",
     standardize=custom_standardization,
 )
 train_eng_texts = [pair[0] for pair in train_pairs]

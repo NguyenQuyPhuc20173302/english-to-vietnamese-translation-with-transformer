@@ -49,11 +49,11 @@ def custom_standardization(input_string):
 
 
 eng_vectorization = TextVectorization(
-    max_tokens=vocab_size, output_mode="int", output_sequence_length=sequence_length,
+    max_tokens=vocab_size, output_mode="tf_idf", output_sequence_length=sequence_length,
 )
 spa_vectorization = TextVectorization(
     max_tokens=vocab_size,
-    output_mode="int",
+    output_mode="tf_idf",
     output_sequence_length=sequence_length + 1,
     standardize=custom_standardization,
 )

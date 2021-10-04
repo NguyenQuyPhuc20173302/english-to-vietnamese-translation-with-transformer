@@ -8,7 +8,7 @@ if __name__=='__main__':
 
     Checkpoint = tf.keras.callbacks.ModelCheckpoint(
         filepath='model.hdf5',
-        monitor='acc',
+        monitor='accuracy',
         save_best_only=True,
         save_weights_only=True,
     )

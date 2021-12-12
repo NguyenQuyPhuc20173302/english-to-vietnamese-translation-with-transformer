@@ -21,18 +21,18 @@ def text_pairs(en, vn):
     return text_pair
 
 
-vn_train = load_data('./data/train/train.vi')
-en_train = load_data('./data/train/train.en')
+vn_train = load_data('./data/train/data.vi')
+en_train = load_data('./data/train/data.ja')
 
-vn_test = load_data('./data/test/test.tgt')
-en_test = load_data('./data/test/test.src')
-
-vn_val = load_data('./data/val/valid.tgt')
-en_val = load_data('./data/val/valid.src')
+# vn_test = load_data('./data/test/test.tgt')
+# en_test = load_data('./data/test/test.src')
+#
+# vn_val = load_data('./data/val/valid.tgt')
+# en_val = load_data('./data/val/valid.src')
 
 train_pairs = text_pairs(en_train, vn_train)
-test_pairs = text_pairs(en_test, vn_test)
-val_pairs = text_pairs(en_val, vn_val)
+# test_pairs = text_pairs(en_test, vn_test)
+# val_pairs = text_pairs(en_val, vn_val)
 
 strip_chars = string.punctuation + "¿"
 strip_chars = strip_chars.replace("[", "")
@@ -79,4 +79,4 @@ def make_dataset(pairs):
 
 
 train_ds = make_dataset(train_pairs)
-val_ds = make_dataset(val_pairs)
+# val_ds = make_dataset(val_pairs)

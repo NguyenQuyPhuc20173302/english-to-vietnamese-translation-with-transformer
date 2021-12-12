@@ -1,14 +1,13 @@
 from load_data import *
 from model_transformer import model
 
-
 if __name__=='__main__':
     transformer = model()
     transformer.summary()
     epochs = 1000
     early_stopping_patience = 10
     # Add early stopping
-    early_stopping = keras.callbacks.EarlyStopping(
+    early_stopping = tf.keras.callbacks.EarlyStopping(
         monitor="accuracy", patience=early_stopping_patience, restore_best_weights=True
     )
     Checkpoint = tf.keras.callbacks.ModelCheckpoint(

@@ -49,11 +49,12 @@ def custom_standardization(input_string):
 
 
 eng_vectorization = TextVectorization(
-    max_tokens=vocab_size, output_mode="int"
+    max_tokens=vocab_size, output_mode="int", output_sequence_length=sequence_length,
 )
 spa_vectorization = TextVectorization(
     max_tokens=vocab_size,
     output_mode="int",
+    output_sequence_length=sequence_length,
     standardize=custom_standardization,
 )
 train_eng_texts = [pair[0] for pair in train_pairs]

@@ -22,4 +22,4 @@ if __name__=='__main__':
         metrics=["accuracy"]
     )
     transformer.load_weights('model.hdf5')
-    transformer.fit(train_ds, epochs=100, callbacks=[early_stopping])
+    transformer.fit(train_ds, epochs=100, callbacks=[early_stopping, Checkpoint])
